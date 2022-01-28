@@ -14,6 +14,22 @@ class TableViewController: UITableViewController {
     var tasks: [Task] = []
     
     // MARK: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let context = getContext()
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let sortDescription = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescription]
+        
+        do {
+            tasks = try context.fetch(fetchRequest)
+        }
+        catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
