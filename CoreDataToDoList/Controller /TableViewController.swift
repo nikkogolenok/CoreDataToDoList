@@ -52,6 +52,33 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Table view delete
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let deleteTasks = tasks[indexPath.row]
+        
+        if editingStyle == .delete {
+            managedContext.delete(deleteTasks)
+            
+            do {
+                try managedContext.save()
+            }
+            catch let error as NSError {
+                print(error.userInfo)
+            }
+        }
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
+        
+        do {
+            tasks = try managedContext.fetch(fetchRequest) as! [Task]
+        } catch let error as NSError {
+            print("Error While Fetching Data From DB: \(error.userInfo)")
+        }
+        tableView.reloadData()
+    }
+    
     // MARK: - Methods
     private func saveTask(withTitle title: String) {
         let context = getContext()
