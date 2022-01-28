@@ -13,6 +13,7 @@
 		449AE9AC27A2CD1C0073B7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449AE9AB27A2CD1C0073B7E7 /* Assets.xcassets */; };
 		449AE9AF27A2CD1C0073B7E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449AE9AD27A2CD1C0073B7E7 /* LaunchScreen.storyboard */; };
 		449AE9BB27A3EB6A0073B7E7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AE9BA27A3EB6A0073B7E7 /* TableViewController.swift */; };
+		449AE9C127A40D560073B7E7 /* CoreDataList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 449AE9BF27A40D560073B7E7 /* CoreDataList.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		449AE9AE27A2CD1C0073B7E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449AE9B027A2CD1C0073B7E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449AE9BA27A3EB6A0073B7E7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		449AE9C027A40D560073B7E7 /* CoreDataList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataList.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		449AE9B927A2CE150073B7E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				449AE9BF27A40D560073B7E7 /* CoreDataList.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449AE9C127A40D560073B7E7 /* CoreDataList.xcdatamodeld in Sources */,
 				449AE9A327A2CD190073B7E7 /* AppDelegate.swift in Sources */,
 				449AE9BB27A3EB6A0073B7E7 /* TableViewController.swift in Sources */,
 				449AE9A527A2CD190073B7E7 /* SceneDelegate.swift in Sources */,
@@ -392,6 +396,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		449AE9BF27A40D560073B7E7 /* CoreDataList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				449AE9C027A40D560073B7E7 /* CoreDataList.xcdatamodel */,
+			);
+			currentVersion = 449AE9C027A40D560073B7E7 /* CoreDataList.xcdatamodel */;
+			path = CoreDataList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 449AE99727A2CD190073B7E7 /* Project object */;
 }
